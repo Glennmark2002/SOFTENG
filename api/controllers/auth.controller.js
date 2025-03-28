@@ -13,10 +13,10 @@ export const google = async (req, res, next) => {
     } else {
       const hashed = bcrypt.hashSync(process.env.SECRET, 1);
       const newUser = new User({
-        username : req.body.name, 
+        username : req.body.username, 
         email : req.body.email, 
         password : hashed,
-        picture : req.body.photo
+        picture : req.body.picture
       })
 
       await newUser.save();
