@@ -5,6 +5,7 @@ import Signup from './pages/Signup';
 import UserHome from './pages/UserHome';
 import Signin from './pages/Signin';
 import PrivateRoute from './components/PrivateRoute';
+import RequestForm from './pages/RequestForm';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route path='/sign-in' element={ currentUser ? <Navigate to='/user' /> : <Signin /> } />
         <Route element={ <PrivateRoute /> } >
           <Route path='/user' element={ <UserHome /> } />
+          <Route path='/request' element={ <RequestForm /> } />
         </Route>
       </Routes>
     </BrowserRouter>

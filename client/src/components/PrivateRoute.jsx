@@ -7,7 +7,7 @@ function PrivateRoute() {
 
   return (
 
-    <div className='h-auto min-h-screen pt-20 px-4 bg-base-200 flex justify-center'>
+    <div className='bg-base-100'>
       { currentUser ? <Outlet /> : <Navigate to='sign-in'/>}
     </div>
   );
